@@ -1,205 +1,199 @@
 html{
-    box-sizing: border-box;
+    box-sizing: border-box; 
     font-size: 100%;
-    height: 100%;
+    height:100%;
 
 }
 
-*, *::before, *::after {
+*{
     box-sizing: inherit; 
 
 }
 
-:root{
-    --violet:hsl(257, 40%, 49%);
-    --magenta:hsl(300, 69%, 71%);
-    --white:hsl(0, 0%, 100%);
-
-}
-
 body{
-    background-color: var(--violet);
-    background-image: url(/images/bg-mobile.svg);
-    background-repeat: no-repeat;
-    padding:37px 39px 37px 39px;
-    margin:0;
- 
-}
-.logo{
-    width:auto;
-    height:30px;
-    margin-bottom:55px
-}
-
-.container>*{
-    text-align: center;
-
-}
-.box1{
-    display:flex;
-    justify-content: center;
-}
-
-.img{
-    max-width: 100%;
-    height: auto;
-
-}
-.register{
-    margin-bottom:80px;
-}
-.register a{
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size:0.7rem;
-}
-.register a:hover{ 
-    background-color: var(--magenta);
-    color:var(--white);
-}
-
-
-h1{
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    color:var(--white);
-    font-size:22.4px;
-    margin-bottom:0px;
-    margin-top:64px;
-    
-}
-
-p{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: normal;
-    color:var(--white);
-    font-size:15.5px;
-    line-height: 1.5rem;
-    margin-bottom:35px;
-    margin-top:20px;
-    opacity:80%;
-}
-
-.button{
-    background-color:var(--white);
-    color:var(--violet);
-    border:none;
-    margin:0;
-    padding: 12px 77px;
-    border-radius:50px;
-    box-shadow: 0 0.5rem 0.4rem rgba(0,0,0,0.15);
-}
-
-.icon >button{
-    color:var(--white);
-    background-color: transparent;
-    border-radius: 50%;
-    width:40px;
-    height: 40px;
-    border:1px var(--white) solid;
-    margin-right:10px;
-}
-
-.icon button:hover{
-    color:var(--magenta);
-    border-color: var(--magenta);
-}
-
-.fa-customize{
-    font-size:20px;
-}
-
-.social{
-    list-style: none;
+    font-family: 'Karla', sans-serif;   
+    line-height: 1.3;
+    color:var(--grayblue);
+    background-color: var(--ltgray);
+    padding:70px var(--paddingX) 77px var(--paddingX) ;
     display:flex;
     justify-content: center;
     align-items: center;
-    padding:0;
+    flex-direction: column;
+    margin:0;
+   
+    
 }
 
+:root{
+    --white:hsl(0, 0%, 100%);
+    --cyan:hsl(179, 62%, 40%);
+    --ltcyan:hsl(179, 62%, 45%);
+    --yellow:hsl(71, 73%, 54%);
+    --dkyellow:hsl(71, 73%, 48%);
+    --ltgray:hsl(204, 43%, 93%);
+    --grayblue:hsl(218, 22%, 67%);
+    --paddingX:40px;
+    --paddingY:40px;
+}
 
-.attribution a{
+a{
     text-decoration: none;
-    color:rgba(245, 245, 245, 0.692);
 }
 
-.attribution{
+h1, h2, h3{
+    font-weight: bold;
+    margin-top:0;
+    line-height: 1.1;
+}
+
+h2{
+    margin-bottom: 1.25rem;
+}
+
+h3{
+    font-size:1.1rem;
+}
+
+p{
+    margin-top:0;
+
+}
+.price{
+    border-radius:0.5rem;
+    overflow:hidden;
+    margin:auto;
+    max-width:40rem;
+    height:100%;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+   
+
+.price >*{
+    padding-left:24px;
+    padding-right:24px;
+    padding-top:40px;
+    
+}
+.community {   
+    background-color:var(--white);
+    padding-bottom:35px;
+}
+
+.community h2{
+    color:var(--cyan);
+    font-weight: bold;
+    font-size:1.25rem;
+}
+
+.community .subtitle{
+    color:var(--yellow);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.community p{
+    font-size:0.8rem;
+    line-height: 1.75;
+    margin-bottom: 0;
+}
+
+.subscription, .why{
+    color:var(--ltgray); 
+    padding:25px 20px;
+}
+
+.subscription {
+    background-color: var(--cyan);
+}
+
+.subscription__price{
+    display:flex;
+    align-items:center;
+    font-size:2rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    
+}
+
+.subscription__price span{
+    font-size:1rem;
+    margin-left: 0.8rem;
+    font-weight: normal;
+    opacity: 0.7;
+ 
+}
+
+.subscription p{
+    margin-bottom: 1.75rem;
+    font-size:0.9rem;
+    opacity: 90%;
+}
+
+.subscription a {
+    display:block;
+    background-color: var(--yellow);
+    color:var(--white);
+    padding:0.75rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    transition:background-color 200ms ease;
+
+}
+
+.subscription a:hover{
+    background-color: var(--dkyellow);
+    
+    
+}
+.why{
+    background-color: var(--ltcyan);
+
+}
+
+.why ul{
     margin:0;
-}
-@media only screen and (min-width:376px){ 
-
-    html{
-        height: 100%;
-    }
-    body{   
-    background-image: url(/images/bg-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    }
-}
-@media only screen and (min-width:1080px){  
-    html{
-        height: 100%;
-    }
-    body{   
-    background-image: url(/images/bg-desktop.svg);
-    background-repeat: no-repeat;
-    padding:66px 80px;
-    margin:0;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    }
-    .logo{
-        width:auto;
-        height:40px;
-        margin-bottom:55px
-    }
-  
-    .container{
-        margin-top:40px;
-        display:flex;
-        justify-content: center;
-
-
-    }
-
-    .box1{
-        width:800px;
-        margin-right: 60px;
-    }
-    .image{
-        min-width:700px;
-        min-height:500px;
-
-    }
-   .box2{
-       width:550px;
-       text-align: left;
-   }
-   h1{
-       font-size:40px;
-   }
-
-   p{
-       font-size: 17px;
-   }
-    
-    .social {
-        list-style: none;
-        display:flex;
-        justify-content: flex-end;
-        align-items: flex-end ;
-    
-    }
-
-    .register a{
-        padding:15px 60px;
-        font-size: 15px;;
-    }
+    padding:0;
 
 }
-    
-    
+
+.why ul li{
+    list-style-type: none;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+    opacity:90%;
+}
+
+
+@media only screen and (min-width:1000px){  
+   
+    body{
+        height:100%;
+        padding:0;
+    }
+    .price{   
+        display:grid;
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows:repeat(2, auto);
+        height:470px;
+    }
+
+    .community{
+       grid-column:1/3;
+    }
+    .community p{
+        font-size:16px;
+    }
+
+    .price >*{
+        padding-left:40px;
+        padding-right: 40px;
+        padding-top:40px;
+    }
+
+    .subscription .why{
+        padding-bottom:30px;
+    }
+}
